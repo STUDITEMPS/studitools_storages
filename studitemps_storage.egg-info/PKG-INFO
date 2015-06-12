@@ -1,0 +1,32 @@
+Metadata-Version: 1.1
+Name: studitemps-storage
+Version: 0.0.1
+Summary: studitemps storage package
+Home-page: http://phabricator.intranet.studitemps.de/diffusion/STOR/
+Author: The almighty Studitemps KISS Developers
+Author-email: kiss-dev@studitemps.de
+License: MIT
+Description: 
+        studitemps_storage is a package with helper funtions for File IO. It only works
+        in a Django Context. By now it includes three modules:
+        
+        - `path.py`: Contains Basic File IO Functions for general usage
+        
+        - `storage`: Django File Storages that make use of functions in path.py
+        
+        - `middleware`: Django Middlewares releated to the usage of the other packages
+        
+        
+Keywords: django fileIO
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
