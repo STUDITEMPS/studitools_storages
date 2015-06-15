@@ -1,0 +1,3 @@
+# to build new package first increase version number in setup.py. Then
+python setup.py sdist
+python setup.py bdist_wheel --universal
