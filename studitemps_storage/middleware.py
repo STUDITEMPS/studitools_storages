@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import traceback
 
 from django.shortcuts import render_to_response
 from django.template import RequestContext
@@ -11,7 +12,11 @@ class CatchFileSystemNotAvailableMiddleware(object):
         if isinstance(exception, FileSystemNotAvailable):
             response = render_to_response(
                 '504.html',
-                {'request': request, 'exception': exception},
+                {
+                    'request': request,
+                    'exception': exception,
+                    'traceback': traceback.format_exc()
+                },
                 RequestContext(request)
             )
             response.status_code = 504

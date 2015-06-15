@@ -5,6 +5,7 @@ from django.conf import settings
 from django.utils._os import safe_join as safe_join
 
 DEFAULT_TIMEOUT = getattr(settings, 'GUARDED_JOIN_TIMEOUT', 1)
+TEST_EXCEPTION = getattr(settings, 'GUARDED_JOIN_TEST', False)
 
 def guarded_join(*sub_paths, **kwargs):
     """
@@ -26,7 +27,10 @@ def guarded_join(*sub_paths, **kwargs):
     """
     timeout = kwargs.get('timeout', DEFAULT_TIMEOUT)
     full_path = os.path.join(*sub_paths)
-    raise FileSystemNotAvailable('afwafawfawfafawfaw')
+    if TEST_EXCEPTION:
+        raise FileSystemNotAvailable(
+            'This is a test Exception. disable in settings'
+        )
     try:
         check_call(['test', '-e', full_path], timeout=timeout)
     except CalledProcessError:
