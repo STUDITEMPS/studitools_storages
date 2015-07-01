@@ -50,7 +50,7 @@ https://github.com/django/django/blob/1.6/django/utils/_os.py#L54
 
 > Joins one or more path components to the base path component intelligently.
 > Returns a normalized, absolute version of the final path.
-
+> 
 > The final path must be located inside of the base path component (otherwise
 > a ValueError is raised).
 
@@ -71,6 +71,7 @@ To run unittests-suites
 # Changelog
 
 ## v0.1.0
+
 * Bumped v0.1.0
 * Update README.md
 * Update docs
@@ -78,4 +79,5 @@ To run unittests-suites
 * Fixed guarded_join_or_create AttributeError
 
 ## v0.0.2
+
 * Project Init
