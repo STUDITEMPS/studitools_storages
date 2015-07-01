@@ -1,4 +1,3 @@
-README.rst
 setup.py
 studitemps_storage/__init__.py
 studitemps_storage/middleware.py
@@ -7,4 +6,11 @@ studitemps_storage/storage.py
 studitemps_storage.egg-info/PKG-INFO
 studitemps_storage.egg-info/SOURCES.txt
 studitemps_storage.egg-info/dependency_links.txt
+studitemps_storage.egg-info/requires.txt
 studitemps_storage.egg-info/top_level.txt
+studitemps_storage/tests/__init__.py
+studitemps_storage/tests/runtests.py
+studitemps_storage/tests/settings.py
+studitemps_storage/tests/suites/__init__.py
+studitemps_storage/tests/suites/path.py
+studitemps_storage/tests/suites/storage.py

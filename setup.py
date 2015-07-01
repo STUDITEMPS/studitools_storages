@@ -9,7 +9,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 # Get the long description from the relevant file
-with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
+with open(path.join(here, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 
@@ -19,7 +19,7 @@ setup(
     # Versions should comply with PEP440.  For a discussion on single-sourcing
     # the version across setup.py and the project code, see
     # https://packaging.python.org/en/latest/single_source_version.html
-    version='0.0.2',
+    version='0.0.3',
 
     description='studitemps storage package',
     long_description=long_description,
@@ -71,7 +71,7 @@ setup(
     # your project is installed. For an analysis of "install_requires" vs pip's
     # requirements files see:
     # https://packaging.python.org/en/latest/requirements.html
-    install_requires=[],
+    install_requires=['subprocess32', 'django<1.7'],
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
@@ -79,7 +79,7 @@ setup(
     # $ pip install -e .[dev,test]
     extras_require={
         # 'dev': ['check-manifest'],
-        # 'test': ['coverage'],
+        'test': ['coverage', 'subprocess32', 'django<1.7'],
     },
 
     # If there are data files included in your packages that need to be
