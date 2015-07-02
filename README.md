@@ -10,14 +10,15 @@ in a Django Context. By now it includes three modules:
 # Installation
 Install the package via PIP
 
-  git+http://phabricator.intranet.studitemps.de/diffusion/STOR/studitools_storages.git@TAG
+  git+http://phabricator.intranet.studitemps.de/diffusion/STOR/studitools_storages.git#TAG
 
 # Configuration
-Sets the default storage-engine
+
+## Sets the default storage-engine
 
   DEFAULT_FILE_STORAGE = 'studitemps_storage.GuardedFileSystemStorage'
 
-Adds the middleware class
+## Adds the middleware class
 
   MIDDLEWARE_CLASSES = (
    ...
@@ -25,14 +26,21 @@ Adds the middleware class
    ...
   )
 
-Sets the timeout in secs for checking if resource is available
+## Sets the timeout in secs for checking if resource is available
 
   GUARDED_JOIN_TIMEOUT = 1  # default
 
 
-This is used for Unittesting to raise the error
+## This is used for Unittesting to raise the error
 
   GUARDED_JOIN_TEST = False  # default
+ 
+## Error-Template
+
+Make sure you have 
+guarded_join raises `FileSystemNotAvailable` and the `CatchFileSystemNotAvailableMiddleware` catches this.
+Make sure you have a template-file `504.html`.
+
 
 # Usage
 
@@ -68,8 +76,25 @@ To run unittests-suites
   python studitemps_storage/tests/runtests.py suites
 
 
+# Update guide
+If you make changes to this repo, please make sure:
+
+* Update TestCases according to code-changes
+* All- and your Tests are still running
+* Update README.md
+  - Docs. with changes
+  - Changelog with Changes and the new version
+* Update setup.py `version` at line 22
+* Commit and create your new Tag
+
+
 # Changelog
 
+## v0.1.1
+
+* Bumped v0.1.1
+* Update Usage-docs
+ 
 ## v0.1.0
 
 * Bumped v0.1.0
