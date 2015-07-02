@@ -36,8 +36,6 @@ Install the package via PIP
   GUARDED_JOIN_TEST = False  # default
  
 ## Error-Template
-
-Make sure you have 
 guarded_join raises `FileSystemNotAvailable` and the `CatchFileSystemNotAvailableMiddleware` catches this.
 Make sure you have a template-file `504.html`.
 
